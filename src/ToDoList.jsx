@@ -1,8 +1,16 @@
-import { useState } from "react"
+import { useState , useEffect } from "react"
 
 function ToDoList(){
     const [tasks, setTasks] = useState(["Task1", "Task2"]);
     const [newTask, setNewTask] = useState("");
+
+    useEffect(()=>{
+        document.title = "New task is added";
+        setTimeout(()=>{
+            document.title = "ToDoList";
+        },5000); 
+    }, [tasks])
+
 
     function handleInputChange(event){
         setNewTask(event.target.value);
