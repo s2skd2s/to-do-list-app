@@ -1,0 +1,38 @@
+.sidebar-tab{
+    background-color: transparent;
+    display: flex;
+    gap: 0.625rem;
+    padding: 0.75rem 0.5rem;
+    height: 100%;
+}
+
+.sidebar-tab:hover{
+    scale: 0.9;
+}
+
+.sidebar-tab span{
+    align-content: center;
+    font-family: "Kanit";
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.minimize .sidebar-tab span{
+    display:none;
+}
+
+.minimize .sidebar-tab {
+    justify-content: center;
+}
+
+
+.sidebar-tab img{
+    width: 35px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .sidebar-tab span{
+        font-size: 0.75em;
+    }
+}
